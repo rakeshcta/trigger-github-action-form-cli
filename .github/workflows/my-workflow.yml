@@ -1,0 +1,17 @@
+name: My Workflow
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build project
+        run: |
+          echo "Building project..."
+          sleep 10
+      - name: Deploy project
+        run: |
+          echo "Deploying project..."
